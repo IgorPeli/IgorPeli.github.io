@@ -1,4 +1,10 @@
-$('#toggle').click(function() {
-   $(this).toggleClass('active');
-   $('#overlay').toggleClass('open');
-  });
+$('#toggle').on({
+   mouseenter: function() {
+      $(this).addClass('active');
+      $('#overlay').addClass('open');
+   },
+   mouseleave: function() {
+      $(this).removeClass('active');
+      $('#overlay').removeClass('open');
+   }
+});
